@@ -10,8 +10,8 @@ float length = 200;
 float shrink = 0.20;
 boolean turnX = false;
 boolean turnY = false;
-float speedY = 1;
-float speedX = 1;
+float speedY = 1.5;
+float speedX = 1.9;
 
 float border;
 
@@ -44,7 +44,7 @@ void draw(){
   }
     
   if(elY - ellW/2 <= border ){
-   speedY = Math.abs(speedY); 
+    speedY = Math.abs(speedY); 
   }
   if(elY + ellW/2 >= 400-border)
     speedY = -Math.abs(speedY);
@@ -60,6 +60,7 @@ void draw(){
   if(length <= 35){
     shrink = 0;
   }*/
+  println("speedY " + speedY + " speedX " + speedX);
   
   
 }
