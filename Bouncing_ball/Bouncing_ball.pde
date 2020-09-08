@@ -36,17 +36,17 @@ void draw(){
   length = length  -shrink;
   
   if(elX - ellW/2 <= border){
-    speedX = Math.abs(speedX);
+    speedX = Math.abs(random(0,3));
     
   }
   if(elX + ellW/2 >= 400-border){
-    speedX = -Math.abs(speedX);
+    speedX = -Math.abs(random(0,3));
   }
     
   if(elY - ellW/2 <= border ){
-    speedY = Math.abs(speedY); 
+    speedY = Math.abs(random(0,3)); 
   }
   if(elY + ellW/2 >= 400-border){
-    speedY = -Math.abs(speedY);
+    speedY = -Math.abs(random(0,3));
   }
 }
