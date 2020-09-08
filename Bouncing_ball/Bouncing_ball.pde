@@ -35,12 +35,19 @@ void draw(){
   
   length = length  -shrink;
   
-  if(elX - ellW/2 <= border || elX + ellW/2 >= 400-border){
-    turnX = true;
+  if(elX - ellW/2 <= border){
+    speedX = Math.abs(speedX);
     
-  }else if(elY - ellW/2 <= border || elY + ellW/2 >= 400-border){
-    turnY = true;
   }
+  if(elX + ellW/2 >= 400-border){
+    speedX = -Math.abs(speedX);
+  }
+    
+  if(elY - ellW/2 <= border ){
+   speedY = Math.abs(speedY); 
+  }
+  if(elY + ellW/2 >= 400-border)
+    speedY = -Math.abs(speedY);
   
   
   if(turnX == true){
@@ -48,14 +55,11 @@ void draw(){
     turnX = false;
   }
   
-  if(turnY == true){
-      speedY = -speedY;
-      turnY = false;
-  }
+
+  /*}
   if(length <= 35){
     shrink = 0;
-  }
+  }*/
+  
   
 }
-  
- 
