@@ -2,8 +2,8 @@ float rectX = 200;
 float rectY = 200;
 
 float ellW = 10;
-float elX = 175;
-float elY = 110;
+float elX = random(110,200);
+float elY = random(110,200);
 
 float length = 200;
 
@@ -46,21 +46,7 @@ void draw(){
   if(elY - ellW/2 <= border ){
     speedY = Math.abs(speedY); 
   }
-  if(elY + ellW/2 >= 400-border)
+  if(elY + ellW/2 >= 400-border){
     speedY = -Math.abs(speedY);
-  
-  
-  if(turnX == true){
-    speedX = -speedX;
-    turnX = false;
   }
-  
-
-  /*}
-  if(length <= 35){
-    shrink = 0;
-  }*/
-  println("speedY " + speedY + " speedX " + speedX);
-  
-  
 }
